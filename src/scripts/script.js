@@ -1,5 +1,5 @@
 var song = document.getElementById('song');
-var tracks = ['Deewana.mp3'];
+var tracks = ['../.././songs/Deewana.mp3'];
 var currentTrack = 0;
 var songLabel = document.getElementById('songLabel');
 
