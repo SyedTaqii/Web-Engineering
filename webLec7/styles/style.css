@@ -1,0 +1,203 @@
+/* Light Mode Colors */
+:root {
+    --primary-color: #90CAF9;  /* Header & Footer */
+    --secondary-color: #E3F2FD; /* Background */
+    --accent-color: #64B5F6;   /* Buttons, Hover */
+    --text-color: #333;        /* Main Text */
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --primary-color: #263238;
+    --secondary-color: #37474F;
+    --accent-color: #0288D1;
+    --text-color: #E3F2FD;
+    --section-bg: #455A64;    /* Section background for dark mode */
+    --section-text: #E3F2FD;  /* Section text color for dark mode */
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color); /* Fixed text visibility */
+}
+
+/* Menu / Header */
+.menu {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-toggle {
+    cursor: pointer;
+    color: white;
+    font-size: 30px; /* Set size for visibility */
+    background: none;
+    border: none;
+}
+
+#menu-toggle:hover {
+    color: black; /* Change color on hover */
+}
+
+/* Site Name */
+#site-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background: var(--primary-color);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    background: var(--primary-color);
+    color: white;
+    padding: 80px 20px;
+    margin-top: 20px; 
+}
+
+#home h1{
+    font-size: 200%;
+}
+
+#offer, #projects, #faqs {
+    background-color: var(--section-bg); 
+    color: var(--section-text);          
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* FAQs Section */
+#faqs {
+    background-color: var(--section-bg); /* Dark mode compatible */
+    color: var(--section-text);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 40px 20px;
+}
+
+/* FAQ Item */
+.faq {
+    background: var(--secondary-color); /* Light/Dark mode adaptable */
+    color: var(--text-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Question Button */
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: var(--accent-color);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0 15px;
+}
+
+/* Opened FAQ */
+.faq-question.active + .faq-answer {
+    padding: 15px;
+}
+
+/* Expand/Collapse Arrow */
+.arrow {
+    transition: transform 0.3s;
+}
+
+.faq-question.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 16px;
+}
