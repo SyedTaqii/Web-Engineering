@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.balance {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 18px;
+}
+.debit {
+    color: green;
+}
+.credit {
+    color: red;
+}
+.history {
+    margin-top: 20px;
+    text-align: left;
+}

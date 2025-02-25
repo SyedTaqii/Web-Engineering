@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <h2>Expense Tracker</h2>
+    <input type="text" id="source" placeholder="Source">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="addTransaction(true)">Income</button>
+    <button onclick="addTransaction(false)">Spend</button>
+    
+    <div class="balance">
+        <div class="debit">Debit Balance: <span id="debit">0</span></div>
+        <div class="credit">Credit Balance: <span id="credit">0</span></div>
+    </div>
+    <h3>Total Amount: <span id="total">0</span></h3>
+    
+    <div class="history">
+        <h3>Transaction History</h3>
+        <ul id="historyList"></ul>
+    </div>
+    
+    <script src="script.js">
+    </script>
 </body>
 </html>
